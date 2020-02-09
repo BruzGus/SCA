@@ -2,6 +2,7 @@ package models
 
 import "github.com/jinzhu/gorm"
 
+//Usuario ..., modelo para el manejo de los usuario de SCA
 type Usuario struct {
 	gorm.Model
 	NickName   string `json:"nickname" gorm:"not null"`
