@@ -1,7 +1,7 @@
 {
     "server": "localhost",
     "port": 5432,
-    "user": "root",
-    "password": "13r4An",
-    "database": "edcomments"
+    "user": "bryan",
+    "password": "bryan",
+    "database": "sca"
 }
