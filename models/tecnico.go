@@ -14,5 +14,5 @@ type Tecnico struct {
 	Usuario  string `json:"usuario"`
 	Email    string `json:"email"`
 	Celular  uint16 `json:"celular"`
-	Pin      string `json:"ping,omitempty"`
+	Pin      string `json:"pin,omitempty"`
 }

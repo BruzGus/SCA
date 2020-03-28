@@ -1,3 +1,6 @@
 # Ejecutables
 sca
 sca.exe
+
+#json 
+*.json
