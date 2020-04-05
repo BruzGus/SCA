@@ -9,4 +9,6 @@ sca.exe
 
 ##keys
 #
+
+*.rsa
 keys/
