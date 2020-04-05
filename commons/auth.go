@@ -31,20 +31,20 @@ func init() {
 		log.Fatal("No se pudo hacer el parse a privateKey")
 	}
 
-	Publickey, err := jwt.ParseRSAPublicKeyFromPEM(publicBytes)
+	Publickey, err = jwt.ParseRSAPublicKeyFromPEM(publicBytes)
 	if err != nil {
 		log.Fatal("NO se pudo hacer el parse a publicKey")
 	}
 
 }
 
-//GenerateJWT funcion para generar el JWT
+//GenerateJWT genera el token para el cliente.
 func GenerateJWT(user models.User) string {
 	claims := models.Claim{
 		User: user,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * 2).Unix(),
-			IssuedAt:  "Sistema Control Asistencia",
+			Issuer:    "Sistema Control Asistencia",
 		},
 	}
 
