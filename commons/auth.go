@@ -39,9 +39,10 @@ func init() {
 }
 
 //GenerateJWT genera el token para el cliente.
-func GenerateJWT(user models.User) string {
+/*func GenerateJWT(user models.User) string {*/
+func GenerateJWT(tecnico models.Tecnico) string {
 	claims := models.Claim{
-		User: user,
+		Tecnico: tecnico, // cambiado
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * 2).Unix(),
 			Issuer:    "Sistema Control Asistencia",
